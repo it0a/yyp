@@ -5,29 +5,40 @@ var concat = require('gulp-concat');
 var bower = require('gulp-bower');
 var del = require('del');
 
+var srcDir = "src";
+var libDir = "lib";
+
 var paths = {
     stylesheets: [
-        'src/css/yyt.css'
+        srcDir + '/css/**/*.css'
     ],
     libraries: [
-        'lib/angular/angular.js',
-        'lib/angular-bootstrap/ui-bootstrap-tpls.js',
-        'lib/angular/lodash.js'
+        libDir + '/angular/angular.js',
+        libDir + '/angular-bootstrap/ui-bootstrap-tpls.js',
+        libDir + '/angular/lodash.js'
     ],
     scripts: [
-        'src/app.js',
-        'src/**/*.js'
+        srcDir + '/app.js',
+        srcDir + '/**/*.js',
+    ],
+    markup: [
+        srcDir + '/index.html',
+        srcDir + '/**/*.html'
     ]
 };
 
 var libJS = "libs.js";
-var appJS = "yyt.js";
-var appCSS = "yys.css";
+var appJS = "yyp.js";
+var appCSS = "yyp.css";
 var distDir = "dist";
 
 gulp.task('bower', ['clean'], function () {
     return bower()
         .pipe(gulp.dest('lib'));
+});
+gulp.task('markup', ['clean'], function () {
+    return gulp.src(paths.markup)
+        .pipe(gulp.dest(distDir));
 });
 gulp.task('clean', function (cb) {
     del(['build'], cb);
@@ -51,5 +62,6 @@ gulp.task('stylesheets', ['clean'], function () {
 gulp.task('watch', function () {
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.stylesheets, ['stylesheets']);
+    gulp.watch(paths.markup, ['markup']);
 });
-gulp.task('default', ['watch', 'libraries', 'scripts', 'stylesheets']);
+gulp.task('default', ['watch', 'libraries', 'scripts', 'stylesheets', 'markup']);
