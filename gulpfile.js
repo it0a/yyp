@@ -5,7 +5,7 @@ var concat = require('gulp-concat');
 var bower = require('gulp-bower');
 var del = require('del');
 
-var srcDir = "src";
+var srcDir = "app";
 var libDir = "lib";
 
 var paths = {
@@ -21,6 +21,7 @@ var paths = {
         libDir + '/lodash/dist/lodash.js'
     ],
     scripts: [
+        srcDir + '/**/*.module.js',
         srcDir + '/app.js',
         srcDir + '/**/*.js',
     ],
