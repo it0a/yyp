@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="yyp">
+<html lang="en" ng-app="yyp" ng-controller="MainCtrl">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <script src="js/libs.js"></script>
     <script src="js/yyp.js"></script>
-    <link href="css/yyp.css" ref="stylesheet"/>
+    <link href="css/yyp.css" rel="stylesheet"/>
   </head>
-  <body ng-controller="MainCtrl">
-    {{test}}
+  <body>
+    <div class="container-fluid">
+      <div class="col-lg-12">
+        <form role="form">
+          <div class="form-group">
+            <input ng-model="text" type="text"/>
+          </div>
+          <button ng-click="submit()" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

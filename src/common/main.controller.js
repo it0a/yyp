@@ -1,7 +1,10 @@
 /*global angular*/
 (function () {
     var MainCtrl = function ($scope) {
-        $scope.test = 'Test';
+        $scope.text = '';
+        $scope.submit = function () {
+            console.log("OK");
+        };
     };
     MainCtrl.$inject = ['$scope'];
     angular.module("yyp")

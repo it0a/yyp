@@ -10,6 +10,7 @@ var libDir = "lib";
 
 var paths = {
     stylesheets: [
+        libDir + '/bootstrap/dist/css/bootstrap.min.css',
         srcDir + '/css/**/*.css'
     ],
     libraries: [
