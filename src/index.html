@@ -9,9 +9,15 @@
   <body>
     <div class="container-fluid">
       <div class="col-lg-12">
+        <div ng-repeat="paste in pastes">
+          <div><a href="" ng-click="remove(paste)">X</a></div>
+          <div>{{paste.title}}</div>
+          <div>{{paste.message}}</div>
+        </div>
         <form role="form">
           <div class="form-group">
-            <input ng-model="text" type="text"/>
+            <label>Title</label><input ng-model="title" type="text"/>
+            <label>Message</label><input ng-model="message" type="text"/>
           </div>
           <button ng-click="submit()" type="submit" class="btn btn-primary">Submit</button>
         </form>
