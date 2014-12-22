@@ -16,6 +16,7 @@
                         user: scope.user,
                         message: scope.message
                     });
+                    scope.message = '';
                 };
             },
             templateUrl: 'paste/views/messages.html'
