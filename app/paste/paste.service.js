@@ -17,11 +17,11 @@
             _pastes.$remove(paste);
         };
         var _add = function (paste) {
-            paste.time = moment().format();
+            paste.time = moment.utc().format();
             _pastes.$add(paste);
         };
         var _addMessage = function (message) {
-            message.time = moment().format();
+            message.time = moment.utc().format();
             _messages.$add(message);
         };
         var _get = function (id) {
