@@ -1,7 +1,21 @@
-<div>
-  <div ng-repeat="paste in pastes">
-    <div><a href="" ng-click="remove(paste)">X</a></div>
-    <div>{{paste.title}}</div>
-    <div>{{paste.message}}</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h4 class="text-center">
+      Pastes
+    </h4>
+  </div>
+</div>
+<div ng-repeat="paste in pastes">
+  <div class="row">
+    <div class="col-xs-2">
+      <div>
+        <a href="" ng-click="remove(paste)">X</a>
+      </div>
+    </div>
+    <div class="col-xs-10">
+      <div>
+        {{paste.title}}
+      </div>
+    </div>
   </div>
 </div>

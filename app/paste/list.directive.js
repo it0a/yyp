@@ -1,3 +1,4 @@
+/*global angular*/
 (function () {
     var ListDirective = function () {
         return {

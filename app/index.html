@@ -7,17 +7,20 @@
     <link href="css/yyp.css" rel="stylesheet"/>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="col-lg-12">
-        <div ng-controller="PasteCtrl">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">yyp</a>
+        </div>
+      </div>
+    </nav>
+    <div ng-controller="PasteCtrl">
+      <div class="container-fluid">
+        <div class="col-lg-2">
           <div paste-list></div>
-          <form role="form">
-            <div class="form-group">
-              <label>Title</label><input ng-model="title" type="text"/>
-              <label>Message</label><input ng-model="message" type="text"/>
-            </div>
-            <button ng-click="submit()" type="submit" class="btn btn-primary">Submit</button>
-          </form>
+        </div>
+        <div class="col-lg-10">
+          <div paste-create></div>
         </div>
       </div>
     </div>
