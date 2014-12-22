@@ -46,3 +46,24 @@ pre {
 .username11 {
     color: #ff73fd;
 }
+
+.message-text {
+    color: #EFE;
+}
+
+.timestamp {
+    color: #446;
+    font-style: italic;
+}
+
+.input-dark {
+    background-color: #333;
+}
+
+.white {
+    color: #FFF;
+}
+
+.margin-top-32 {
+    margin-top: 32px;
+}
