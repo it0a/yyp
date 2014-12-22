@@ -1,6 +1,6 @@
 /*global angular*/
 (function () {
-    angular.module("paste", ["ui.bootstrap", "ui.router", "angularSpinner", "hljs", "firebase"]);
+    angular.module("paste", ["ui.bootstrap", "ui.router", "angularSpinner", "ngSanitize", "hljs", "firebase"]);
     angular.module("paste")
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/messages");

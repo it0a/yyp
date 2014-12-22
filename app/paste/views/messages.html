@@ -24,9 +24,7 @@
         {{message.user}}
       </div>
       <div class="col-md-8">
-        <span class="message-text">
-          {{message.message}}
-        </span>
+        <span class="message-text" ng-bind-html="message.message | linky"></span>
       </div>
       <div class="col-md-3 text-right">
         <span class="timestamp">
