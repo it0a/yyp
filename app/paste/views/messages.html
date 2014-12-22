@@ -1,0 +1,37 @@
+<div>
+  <div style="margin-top: 32px;" ng-show="!loaded">
+    <span us-spinner="{color: '#FFF'}"></span>
+  </div>
+  <div ng-show="loaded">
+    <div class="row">
+      <div class="col-md-1 text-right">
+        <input class="form-control" style="text-align: right; background-color: #333; color: #A8FF60;" type="text" ng-model="user" placeholder="Name"/>
+      </div>
+      <div class="col-md-10">
+        <input class="form-control" style="background-color: #333; color: #FFF;" type="text" ng-model="message" placeholder="Message"/>
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-primary" type="submit" ng-click="add()">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true" ui-sref="create"></span>
+          Send</button>
+      </div>
+    </div>
+    <div ng-repeat="message in messages | orderBy: '-time'" ng-animate="'animate'">
+    <div class="row">
+      <div class="col-md-1 text-right" style="color: #A8FF60">
+        {{message.user}}
+      </div>
+      <div class="col-md-8">
+        <span style="color: #EFE;">
+          {{message.message}}
+        </span>
+      </div>
+      <div class="col-md-3 text-right">
+        <span style="color: #446; font-style: italic;">
+          {{message.time | date:"short" }}
+        </span>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

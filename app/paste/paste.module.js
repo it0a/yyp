@@ -3,8 +3,12 @@
     angular.module("paste", ["ui.bootstrap", "ui.router", "angularSpinner", "hljs", "firebase"]);
     angular.module("paste")
     .config(function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/create");
+        $urlRouterProvider.otherwise("/messages");
         $stateProvider
+        .state('messages', {
+            url: "/messages",
+            templateUrl: "paste/partials/messages.html"
+        })
         .state('show', {
             url: "/show/:id",
             templateUrl: "paste/partials/show.html",
