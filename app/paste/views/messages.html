@@ -5,13 +5,13 @@
   <div ng-show="loaded">
     <div class="row">
       <form name="messageForm" role="form" novalidate>
-      <div class="col-md-2 text-right">
+      <div class="col-xs-2 text-right">
         <input class="form-control input-dark text-right" ng-class="userClass(user)" type="text" ng-model="user" placeholder="Name" required/>
       </div>
-      <div class="col-md-9">
+      <div class="col-xs-9">
         <input class="form-control input-dark white" type="text" ng-model="message" placeholder="Message" required/>
       </div>
-      <div class="col-md-1">
+      <div class="col-xs-1 text-right">
         <button ng-disabled="messageForm.$invalid" class="btn btn-primary" type="submit" ng-click="add()">
           <span class="glyphicon glyphicon-pencil" aria-hidden="true" ui-sref="create"></span>
           Send</button>
@@ -20,13 +20,13 @@
     </div>
     <div ng-repeat="message in messages | reverse" ng-animate="'animate'">
     <div class="row">
-      <div class="col-md-1 text-right" ng-class="userClass(message.user)">
+      <div class="col-xs-2 text-right" ng-class="userClass(message.user)">
         {{message.user}}
       </div>
-      <div class="col-md-8">
+      <div class="col-xs-7">
         <span class="message-text" ng-bind-html="message.message | linky"></span>
       </div>
-      <div class="col-md-3 text-right">
+      <div class="col-xs-3 text-right">
         <span class="timestamp">
           {{message.time | date:"short" }}
         </span>
