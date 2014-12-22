@@ -11,6 +11,7 @@ var libDir = "lib";
 var paths = {
     stylesheets: [
         libDir + '/bootstrap/dist/css/bootstrap.min.css',
+        libDir + '/highlightjs/styles/ir_black.css',
         srcDir + '/css/**/*.css'
     ],
     libraries: [
@@ -22,7 +23,9 @@ var paths = {
         libDir + '/firebase/firebase.js',
         libDir + '/angularfire/dist/angularfire.js',
         libDir + '/lodash/dist/lodash.js',
-        libDir + '/moment/min/moment.min.js'
+        libDir + '/moment/min/moment.min.js',
+        libDir + '/highlightjs/highlight.pack.js',
+        libDir + '/angular-highlightjs/angular-highlightjs.js'
     ],
     scripts: [
         srcDir + '/**/*.module.js',
