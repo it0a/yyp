@@ -20,7 +20,7 @@
     </div>
     <div ng-repeat="message in messages | reverse" ng-animate="'animate'">
     <div class="row">
-      <div class="col-md-1 text-right" style="color: #A8FF60">
+      <div class="col-md-1 text-right" ng-class="userClass(message.user)">
         {{message.user}}
       </div>
       <div class="col-md-8">
