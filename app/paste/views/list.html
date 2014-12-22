@@ -3,6 +3,7 @@
     <div class="col-xs-12">
       <h4 class="text-center">
         Pastes
+        <a ui-sref="create">Create</a>
       </h4>
     </div>
   </div>
@@ -21,7 +22,7 @@
         </div>
         <div class="col-xs-10">
           <div>
-            <a href="" ui-sref="show">
+            <a href="" ui-sref="show({id:paste.$id})">
               {{paste.title}}
             </a>
           </div>

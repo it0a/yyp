@@ -3,15 +3,12 @@
     angular.module("paste", ["ui.bootstrap", "ui.router", "firebase"]);
     angular.module("paste")
     .config(function ($stateProvider, $urlRouterProvider) {
-        //
-        // For any unmatched url, redirect to /state1
-        $urlRouterProvider.otherwise("/show");
-        //
-        // Now set up the states
+        $urlRouterProvider.otherwise("/create");
         $stateProvider
         .state('show', {
-            url: "/show",
-            templateUrl: "paste/partials/show.html"
+            url: "/show/:id",
+            templateUrl: "paste/partials/show.html",
+            controller: "PasteShowCtrl"
         })
         .state('create', {
             url: "/create",
