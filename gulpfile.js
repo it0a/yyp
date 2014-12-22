@@ -16,6 +16,7 @@ var paths = {
     libraries: [
         libDir + '/angular/angular.js',
         libDir + '/angular-bootstrap/ui-bootstrap-tpls.js',
+        libDir + '/angular-ui-router/release/angular-ui-router.js',
         libDir + '/firebase/firebase.js',
         libDir + '/angularfire/dist/angularfire.js',
         libDir + '/lodash/dist/lodash.js'

@@ -10,7 +10,7 @@
     Loading
   </div>
   <div ng-show="loaded">
-    <div ng-repeat="paste in pastes">
+    <div ng-repeat="paste in pastes" ng-animate="'animate'">
       <div class="row">
         <div class="col-xs-2">
           <div>
@@ -21,7 +21,9 @@
         </div>
         <div class="col-xs-10">
           <div>
-            {{paste.title}}
+            <a href="" ui-sref="show">
+              {{paste.title}}
+            </a>
           </div>
         </div>
       </div>

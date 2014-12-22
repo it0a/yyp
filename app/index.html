@@ -15,12 +15,15 @@
       </div>
     </nav>
     <div ng-controller="PasteCtrl">
+      <base href="paste"/>
       <div class="container-fluid">
         <div class="col-lg-2">
           <div paste-list></div>
         </div>
         <div class="col-lg-10">
-          <div paste-create></div>
+          <div ui-view></div>
+          <a ui-sref="show">Show</a>
+          <a ui-sref="create">Create</a>
         </div>
       </div>
     </div>

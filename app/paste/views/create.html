@@ -1,9 +1,13 @@
 <div>
   <form role="form">
     <div class="form-group">
-      <label>Title</label><input ng-model="title" type="text"/>
-      <label>Message</label><input ng-model="message" type="text"/>
+      <label for="pasteTitle">Title</label>
+      <input type="text" value="" placeholder="Enter title..." class="form-control" ng-model="title"/>
     </div>
-    <button ng-click="submit()" type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group">
+      <label for="pasteText">Paste</label>
+      <textarea class="form-control" placeholder="Enter text..." ng-model="message" ></textarea>
+    </div>
+    <button class="btn btn-default" type="submit" ng-click="submit()">Save</button>
   </form>
 </div>
