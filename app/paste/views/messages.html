@@ -4,10 +4,11 @@
   </div>
   <div ng-show="loaded">
     <div class="row">
-      <div class="col-md-1 text-right">
+      <form role="form">
+      <div class="col-md-2 text-right">
         <input class="form-control" style="text-align: right; background-color: #333; color: #A8FF60;" type="text" ng-model="user" placeholder="Name"/>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-9">
         <input class="form-control" style="background-color: #333; color: #FFF;" type="text" ng-model="message" placeholder="Message"/>
       </div>
       <div class="col-md-1">
@@ -15,6 +16,7 @@
           <span class="glyphicon glyphicon-pencil" aria-hidden="true" ui-sref="create"></span>
           Send</button>
       </div>
+      </form>
     </div>
     <div ng-repeat="message in messages | orderBy: '-time'" ng-animate="'animate'">
     <div class="row">
