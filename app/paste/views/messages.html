@@ -18,7 +18,7 @@
       </div>
       </form>
     </div>
-    <div ng-repeat="message in messages | orderBy: '-$id'" ng-animate="'animate'">
+    <div ng-repeat="message in messages | reverse" ng-animate="'animate'">
     <div class="row">
       <div class="col-md-1 text-right" style="color: #A8FF60">
         {{message.user}}

@@ -18,5 +18,10 @@
             url: "/create",
             templateUrl: "paste/partials/create.html"
         });
+    })
+    .filter('reverse', function() {
+        return function(items) {
+            return items.slice().reverse();
+        };
     });
 }());
