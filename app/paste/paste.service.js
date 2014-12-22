@@ -5,7 +5,7 @@
         var _sync = $firebase(_ref);
         var _pastes = _sync.$asArray();
         var _getPastes = function () {
-            return _pastes;
+            return _pastes.$loaded();
         };
         var _remove = function (paste) {
             _pastes.$remove(paste);

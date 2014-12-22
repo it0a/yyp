@@ -28,6 +28,10 @@ var paths = {
     markup: [
         srcDir + '/index.html',
         srcDir + '/**/*.html'
+    ],
+    fonts: [
+        libDir + '/bootstrap/fonts/**/*.woff',
+        libDir + '/bootstrap/fonts/**/*.ttf'
     ]
 };
 
@@ -43,6 +47,10 @@ gulp.task('bower', ['clean'], function () {
 gulp.task('markup', ['clean'], function () {
     return gulp.src(paths.markup)
         .pipe(gulp.dest(distDir));
+});
+gulp.task('fonts', ['clean'], function () {
+    return gulp.src(paths.fonts)
+        .pipe(gulp.dest(distDir + '/fonts'));
 });
 gulp.task('clean', function (cb) {
     del(['build'], cb);
@@ -68,4 +76,4 @@ gulp.task('watch', function () {
     gulp.watch(paths.stylesheets, ['stylesheets']);
     gulp.watch(paths.markup, ['markup']);
 });
-gulp.task('default', ['watch', 'libraries', 'scripts', 'stylesheets', 'markup']);
+gulp.task('default', ['watch', 'libraries', 'scripts', 'stylesheets', 'markup', 'fonts']);
