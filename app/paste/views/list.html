@@ -6,7 +6,7 @@
   <div class="text-center" ng-show="pastes.length === 0">
     No Pastes
   </div>
-  <div ng-repeat="paste in pastes | orderBy: 'time'" ng-animate="'animate'">
+  <div ng-repeat="paste in pastes | orderBy: '-time'" ng-animate="'animate'">
     <div>
       <a href="" ui-sref="show({id:paste.$id})">
         {{paste.title}}
