@@ -17,6 +17,8 @@ var paths = {
         libDir + '/angular/angular.js',
         libDir + '/angular-bootstrap/ui-bootstrap-tpls.js',
         libDir + '/angular-ui-router/release/angular-ui-router.js',
+        libDir + '/spin.js/spin.js',
+        libDir + '/angular-spinner/angular-spinner.js',
         libDir + '/firebase/firebase.js',
         libDir + '/angularfire/dist/angularfire.js',
         libDir + '/lodash/dist/lodash.js'
