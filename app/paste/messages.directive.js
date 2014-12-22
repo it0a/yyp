@@ -7,6 +7,7 @@
                 scope.user = '';
                 scope.message = '';
                 scope.loaded = false;
+                scope.messages = [];
                 PasteService.getMessages().then(function (data) {
                     scope.messages = data;
                     scope.loaded = true;
