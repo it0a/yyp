@@ -21,7 +21,8 @@ var paths = {
         libDir + '/angular-spinner/angular-spinner.js',
         libDir + '/firebase/firebase.js',
         libDir + '/angularfire/dist/angularfire.js',
-        libDir + '/lodash/dist/lodash.js'
+        libDir + '/lodash/dist/lodash.js',
+        libDir + '/moment/min/moment.min.js'
     ],
     scripts: [
         srcDir + '/**/*.module.js',

@@ -11,6 +11,7 @@
             _pastes.$remove(paste);
         };
         var _add = function (paste) {
+            paste.time = moment().format();
             _pastes.$add(paste);
         };
         var _get = function (id) {
