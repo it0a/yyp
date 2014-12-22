@@ -1,8 +1,11 @@
 <div>
-  <div ng-show="!loaded">
-    Loading
+  <div style="margin-top: 32px;" ng-show="!loaded">
+    <span us-spinner="{color: '#FFF'}"></span>
   </div>
   <div ng-show="loaded">
+    <div class="text-center" ng-show="pastes.length === 0">
+      No Pastes
+    </div>
     <div ng-repeat="paste in pastes" ng-animate="'animate'">
       <div class="row">
         <div class="col-xs-2">
