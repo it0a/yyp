@@ -24,6 +24,15 @@
             message.time = moment.utc().format();
             _messages.$add(message);
         };
+        var _archiveMessages = function () {
+            _add({
+                title: "Chat " + moment().format("MM/DD/YYYY hh:mm:ss").toString(),
+                message: _.reduce(_messages, function (sum, message) {
+                    return sum + "[" + moment(message.time).format("MM/DD/YYYY hh:mm:ss").toString() + "] " + message.user + ": " + message.message + "\n";
+                }, "")
+            });
+            _messagesRef.remove();
+        };
         var _get = function (id) {
             return _.find(_pastes, function (x) {
                 return x.$id === id;
@@ -33,6 +42,7 @@
             getPastes: _getPastes,
             getMessages: _getMessages,
             addMessage: _addMessage,
+            archiveMessages: _archiveMessages,
             remove: _remove,
             get: _get,
             add: _add
